@@ -38,9 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts.apps.AccountsConfig',
+    'home.apps.HomeConfig',
+
+    
     'rest_framework',
     'drf_spectacular',
     'ckeditor',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -134,3 +138,39 @@ CKEDITOR_CONFIGS = {
         
     },
 }
+
+
+###############  ARVAN CLOUD STORAGES
+
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_S3_ACCESS_KEY_ID = 'e1b73ee2-5b7b-495e-b547-a470c2ca57a0'
+AWS_SECRET_ACCESS_KEY = '179276af4bcbc6016912cf380dfba0e9df3e22ac06fee6179d07bd0227c9e50f'
+AWS_S3_ENDPOINT_URL = 'https://s3.ir-thr-at1.arvanstorage.com'
+
+AWS_STORAGE_BUCKET_NAME = 'webway'
+AWS_SERVICE_NAME = 's3'
+AWS_S3_FILE_OVERWRITE=False
+AWS_LOCAL_STORAGE=f'{BASE_DIR}/aws/'
+
+############################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
